@@ -1,0 +1,22 @@
+{
+    "name": "mvrhov/phinx-bundle",
+    "type": "symfony-bundle",
+    "description": "mvrhov phinx bundle",
+    "keywords": ["Phinx bundle"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "mvrhov\\PhinxBundle\\": ""
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "robmorgan/phinx": "^0.6"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.5.x-dev"
+        }
+    }
+}
