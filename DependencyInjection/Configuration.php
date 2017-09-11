@@ -83,6 +83,7 @@ class Configuration implements ConfigurationInterface
                                 ->scalarNode('port')->defaultNull()->end()
                                 ->scalarNode('user')->end()
                                 ->scalarNode('pass')->defaultNull()->end()
+                                ->scalarNode('password')->defaultNull()->end()
                                 ->scalarNode('charset')->end()
                                 ->scalarNode('collation')->end()
                                 ->booleanNode('memory')->info('Sqlite database should be in memory only')->end()
