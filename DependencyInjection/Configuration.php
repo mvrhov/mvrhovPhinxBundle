@@ -69,7 +69,7 @@ class Configuration implements ConfigurationInterface
                                 ->always()
                                 ->then(function ($v) {
                                     //remap password into pass
-                                    if ($v['password']) {
+                                    if (isset($v['password'])) {
                                         $v['pass'] = $v['password'];
                                         unset($v['password']);
                                     }
