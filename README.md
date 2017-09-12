@@ -40,14 +40,14 @@ The fastest way to install Phinx bundle is to add it to your project using Compo
    mvrhov_phinx:
        adapters:
            mysql: Phinx\Db\Adapter\MysqlAdapter
-   environment:
-       connection:        
-           adapter: mysql
-           host: '%database_host%'
-           port: '%database_port%'
-           name: '%database_name%'
-           user: '%database_user%'
-           pass: '%database_password%'
-           charset: UTF8
+       environment:
+           connection:        
+               adapter: mysql
+               host: '%database_host%'
+               port: '%database_port%'
+               name: '%database_name%'
+               user: '%database_user%'
+               pass: '%database_password%'
+               charset: UTF8
    ```
    See `DependencyInjection/Configuration.php` for full list of available options.
