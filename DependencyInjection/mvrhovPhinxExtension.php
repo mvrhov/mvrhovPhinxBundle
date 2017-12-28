@@ -25,7 +25,9 @@
 namespace mvrhov\PhinxBundle\DependencyInjection;
 
 use Phinx\Config\Config;
+use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 /**
@@ -69,10 +71,14 @@ class mvrhovPhinxExtension extends Extension
 
         $env = $container->register('phinx.config', Config::class);
         $env->setArguments([$options]);
+        $env->setPublic(true);
 
         if (isset($config['adapters'])) {
             $container->setParameter('phinx.adapters', $config['adapters']);
         }
+
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('console.xml');
     }
 
 }
