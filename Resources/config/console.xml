@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="mvrhov_phinx.command.breakpoint_command" class="mvrhov\PhinxBundle\Command\BreakpointCommand" public="false">
+            <tag name="console.command" command="phinx:breakpoint" />
+        </service>
+
+        <service id="mvrhov_phinx.command.create_command" class="mvrhov\PhinxBundle\Command\CreateCommand" public="false">
+            <tag name="console.command" command="phinx:create" />
+        </service>
+
+        <service id="mvrhov_phinx.command.migrate_command" class="mvrhov\PhinxBundle\Command\MigrateCommand" public="false">
+            <tag name="console.command" command="phinx:migrate" />
+        </service>
+
+        <service id="mvrhov_phinx.command.rollback_command" class="mvrhov\PhinxBundle\Command\RollbackCommand" public="false">
+            <tag name="console.command" command="phinx:rollback" />
+        </service>
+
+        <service id="mvrhov_phinx.command.status_command" class="mvrhov\PhinxBundle\Command\StatusCommand" public="false">
+            <tag name="console.command" command="phinx:status" />
+        </service>
+    </services>
+</container>
