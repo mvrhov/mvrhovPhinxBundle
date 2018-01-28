@@ -73,10 +73,17 @@ class Configuration implements ConfigurationInterface
                                         $v['pass'] = $v['password'];
                                         unset($v['password']);
                                     }
+
                                     return $v;
                                 })
                             ->end()
                             ->children()
+                                //Consumers can pass (adapter, name, host, port, user, pass)
+                                //in a single 'url' configuration parameter (convenient for Symfony >=4),
+                                //or they may pass them separately (convenient for Symfony<4).
+                                //
+                                //`mvrhov\PhinxBundle\Config\Config` takes care of normalizing the differences.
+                                ->scalarNode('url')->end()
                                 ->scalarNode('adapter')->end()
                                 ->scalarNode('name')->end()
                                 ->scalarNode('host')->defaultValue('localhost')->end()

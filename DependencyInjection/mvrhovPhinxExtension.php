@@ -24,7 +24,7 @@
  */
 namespace mvrhov\PhinxBundle\DependencyInjection;
 
-use Phinx\Config\Config;
+use mvrhov\PhinxBundle\Config\Config;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
